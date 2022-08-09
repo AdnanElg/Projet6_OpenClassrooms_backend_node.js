@@ -2,7 +2,11 @@ Installation et mise en service du backend :
 
 Backend :
 
+<<<<<<< HEAD
 -téléchargement du backend ici : https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js  ou
+=======
+-téléchargement du backend ici : https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js ou
+>>>>>>> 910e38b9aaa3216522515dc725a6bfe1c3f5c952
 
 $ git clone https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js.git backend
 
@@ -15,10 +19,15 @@ $ npm install
 après, création du fichier .env à la racine du répertoire et y mettre les valeurs correctes pour se connecter à une base de donnée mongodb :
 
 PORT = 3000 (le front fonctionne bien avec le backend sur le port 3000)
+
 DB_USERNAME="username de la base de donnée mongodb"
+
 DB_PASSWORD="password de la base de donnée mongodb"
+
 DB_CLUSTER = "cluster de la base de donnée mongodb"
+
 CRYPTOJS_EMAIL = "XXXXX"
+
 JWT_KEY_TOKEN = "XXXXX"
 
 ou prendre le fichier .en.example, mettre les bonnes valeurs et modifier le nom du fichier en .env
