@@ -2,11 +2,7 @@ Installation et mise en service du backend :
 
 Backend :
 
-<<<<<<< HEAD
--téléchargement du backend ici : https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js  ou
-=======
 -téléchargement du backend ici : https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js ou
->>>>>>> 910e38b9aaa3216522515dc725a6bfe1c3f5c952
 
 $ git clone https://github.com/AdnanElg/Projet6_OpenClassrooms_backend_node.js.git backend
 
