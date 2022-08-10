@@ -5,6 +5,7 @@ const Sauce = require('../models/Sauce');
 const fs = require('fs');
 
 
+
 //Logique POST :
 
 exports.createSauce = (req, res, next) => {
@@ -33,16 +34,16 @@ exports.modifySauce = (req, res, next) => {
   if(req.file){
     Sauce.findOne({ _id: req.params.id})
     .then(sauce => {
-        const filename = sauce.imageUrl.split("/images")[1];
+      const filename = sauce.imageUrl.split("/images")[1];
 
       //suppression de l'image de la sauce car elle va être remplacer par la nouvelle image de sauce :
       fs.unlink(`images/${filename}`, (err) => {
         if(err) throw err;
       })
+
     })
     .catch(error => res.status(400).json({error}));  
   }
-
 
   
   //l'objet qui va être envoyé dans la base de donnée :
@@ -53,6 +54,7 @@ exports.modifySauce = (req, res, next) => {
     imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
   } :
   { ...req.body};
+
 
   //update dans la base de donnée :
   Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id }) 
@@ -88,7 +90,7 @@ exports.deleteSauce = (req, res, next) => {
 exports.getAllSauce = (req, res, next) => {
   //utilisation de la méthode find() pour avoir la liste complète :
     Sauce.find()
-      .then(sauces => res.status(201).json(sauces))
+      .then(sauces => res.status(200).json(sauces))
       .catch(error => res.status(400).json({error}));
 }
 
@@ -101,7 +103,7 @@ exports.getOneSauce =  (req, res, next) => {
   
     Sauce.findOne({_id: req.params.id})
       .then(sauce => res.status(200).json(sauce))
-      .catch(error => res.status(400).json({error}));
+      .catch((error) => res.status(400).json({error}));
 }
 
 

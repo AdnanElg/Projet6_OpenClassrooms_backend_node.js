@@ -47,12 +47,12 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // utilisation du module 'helmet' pour la sécurité en protégeant l'application de certaines vulnérabilités :
-app.use(helmet());
+app.use(helmet({crossOriginResourcePolicy: false,}));
 
 
 
 //Routes :
-app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static(path.join(__dirname,'images')));
 app.use('/api/auth', userRoutes);
 app.use('/api/sauces', sauceRoutes);
 
