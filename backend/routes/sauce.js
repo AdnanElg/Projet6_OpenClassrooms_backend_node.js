@@ -18,27 +18,27 @@ const likeControllers = require("../controllers/like")
 
 
 
-//Midellware POST :
+//Route POST :
 router.post('/', auth, multer, sauceControllers.createSauce);
 
 
-//Midellware PUT :
+//Route PUT :
 router.put('/:id', auth, multer, sauceControllers.modifySauce);
 
 
-//Midellware DELETE :
+//Route DELETE :
 router.delete('/:id', auth, sauceControllers.deleteSauce);
 
 
-//Midellware GET :
+//Route GET :
 router.get('/', auth, sauceControllers.getAllSauce);
 
 
-//Midellware GET :
+//Route GET :
 router.get('/:id', auth, sauceControllers.getOneSauce);
 
 
-//Midellware POST :
+//Route POST :
 router.post("/:id/like" , auth, likeControllers.likeSauce);
 
 

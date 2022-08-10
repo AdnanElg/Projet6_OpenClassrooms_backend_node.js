@@ -11,6 +11,7 @@ const userSchema = mongoose.Schema({
 });
 
 //sécurité conseillé pour ne pas enregistrer 2 fois la même adresse email dans la basse de donée :
+// on applique la méthode plugin pour controler le mail :
 userSchema.plugin(uniqueValidator);
 
 //Exportation du userSchema : 

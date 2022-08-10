@@ -12,10 +12,10 @@ const password = require('../middleware/password');
 
 
 
-//Midellware POST (signup) :
+//Router POST (signup) :
 router.post('/signup', password, userControllers.signup);
 
-//Midellware POST (login):
+//Router POST (login):
 router.post('/login', userControllers.login);
 
 
