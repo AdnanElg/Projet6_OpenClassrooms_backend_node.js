@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
         //supprimer les espace dans le nom du fichier :
         const name = file.originalname.split(' ').join('_');
         const extension = MIME_TYPES[file.mimetype]
-        callback(null, name + Date.now() + '.' + extension);
+        callback(null, name + '_' + Date.now() + '.' + extension);
     }
 })
 
