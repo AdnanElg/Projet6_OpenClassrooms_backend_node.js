@@ -10,11 +10,19 @@ const mongoose = require('./mongoDB/db');
 //Importation du path de notre serveur :
 const path = require('path');
 
+//Importation de helmet :
+const helmet = require("helmet");
+
+
+
 //Importation de fichier user.js de routes :
 const userRoutes = require('./routes/user');
 
 //Importation de fichier sauce.js de routes :
 const sauceRoutes = require('./routes/sauce');
+
+
+
 
 //Appel de Express pour crée une application :
 const app = express();
@@ -37,6 +45,9 @@ app.use((req, res, next) => {
 
 //Utilisation de la fonction express.json() grâce à Express pour récupérer les requêtes et les afficher en format json :
 app.use(express.json());
+
+// utilisation du module 'helmet' pour la sécurité en protégeant l'application de certaines vulnérabilités :
+app.use(helmet());
 
 
 

@@ -32,7 +32,7 @@ exports.modifySauce = (req, res, next) => {
 
   if(req.file){
     Sauce.findOne({ _id: req.params.id})
-      .then(sauce => {
+    .then(sauce => {
         const filename = sauce.imageUrl.split("/images")[1];
 
       //suppression de l'image de la sauce car elle va être remplacer par la nouvelle image de sauce :
@@ -41,8 +41,10 @@ exports.modifySauce = (req, res, next) => {
       })
     })
     .catch(error => res.status(400).json({error}));  
-  }else{};
+  }
 
+
+  
   //l'objet qui va être envoyé dans la base de donnée :
   const sauceObject = req.file ?
 
