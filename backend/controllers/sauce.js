@@ -20,7 +20,7 @@ exports.createSauce = (req, res, next) => {
     //enregistrer l'objet dans la base de donné en appelant la méthode save :
     sauce.save()
         .then(() => { res.status(201).json({message: 'Objet enregistré !'})})
-        .catch(error => { res.status(400).json( { error })})
+        .catch(error => { res.status(400).json( { error })});
 }
 
 
