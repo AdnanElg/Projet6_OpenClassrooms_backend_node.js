@@ -43,5 +43,5 @@ router.post("/:id/like" , auth, likeControllers.likeSauce);
 
 
 
-//Exportation du fichier stuff.js de routes :
+//Exportation du fichier sauce.js de routes :
 module.exports = router;

@@ -4,7 +4,7 @@ const express = require('express');
 //Appel de Express pour crée le router de chaque midellware :
 const router = express.Router();
 
-//Importation de fichier stuff.js de controllers :
+//Importation de fichier user.js de controllers :
 const userControllers = require('../controllers/user');
 
 //importation du middleware/password :
@@ -20,5 +20,5 @@ router.post('/login', userControllers.login);
 
 
 
-//Exportation du fichier stuff.js de routes :
+//Exportation du fichier user.js de routes :
 module.exports = router;
