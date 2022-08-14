@@ -26,7 +26,7 @@ CRYPTOJS_EMAIL = "XXXXX"
 
 JWT_KEY_TOKEN = "XXXXX"
 
-ou prendre le fichier .en.example, mettre les bonnes valeurs et modifier le nom du fichier en .env
+ou prendre le fichier .example.env, mettre les bonnes valeurs et modifier le nom du fichier en .env
 
 et après
 $ npm run start
